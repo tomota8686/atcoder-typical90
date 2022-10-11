@@ -10,5 +10,21 @@ int main() {
         cin >> a[i];
     }
 
-    
+    int cnt = 0;
+
+    for(int i=1; i<n+1; i++) {
+        for(int j=1; j<i; j++) {
+            for(int k=1; k<j; k++) {
+                for(int l=1; l<k; l++) {
+                    for(int m=1; m<l; m++){
+                        if(1LL*a[i]*a[j]%p*a[k]%p*a[l]%p*a[m] % p == q) cnt++;
+                    }
+                }
+            }
+        }
+    }
+
+    cout << cnt << endl;
+    return 0;
+
 }
